@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #222222;
+    --muted: #555555;
+    --link: #224b8d;
+    --heading: #527bbd;
+    --menu-bg: #f6f6f6;
+    --line: #dddddd;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px; line-height: 1.6;
+  }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .layout { display: flex; max-width: 1000px; margin: 0 auto; }
+
+  /* Left menu */
+  .menu {
+    width: 190px; flex-shrink: 0; padding: 24px 16px;
+    background: var(--menu-bg); border-right: 1px solid var(--line);
+    min-height: 100vh; position: sticky; top: 0; align-self: flex-start;
+  }
+  .menu .cat {
+    font-weight: bold; font-size: 14px; color: var(--muted);
+    margin: 0 0 6px; padding-bottom: 4px; border-bottom: 1px solid var(--line);
+  }
+  .menu a { display: block; padding: 3px 0; font-size: 15px; }
+
+  /* Main content */
+  main { flex: 1; padding: 28px 36px 60px; min-width: 0; }
+  h1 {
+    color: var(--heading); font-weight: normal; font-size: 30px;
+    margin: 0 0 4px; padding-bottom: 6px; border-bottom: 1px solid var(--line);
+  }
+  .subtitle { color: var(--muted); margin: 0 0 20px; }
+  h2 {
+    color: var(--heading); font-weight: normal; font-size: 22px;
+    margin: 32px 0 10px; padding-bottom: 4px; border-bottom: 1px solid var(--line);
+  }
+  h3 { font-size: 17px; margin: 16px 0 2px; }
+
+  .profile { display: flex; gap: 22px; align-items: flex-start; margin-bottom: 8px; }
+  .profile img {
+    width: 150px; height: 180px; object-fit: cover;
+    border: 1px solid var(--line); flex-shrink: 0;
+  }
+  .profile p { margin: 0 0 6px; }
+
+  hr { border: none; border-top: 1px solid var(--line); margin: 20px 0; }
+  ul { padding-left: 22px; margin: 6px 0; }
+  li { margin-bottom: 6px; }
+  .date { color: var(--muted); }
+  .small { color: var(--muted); font-size: 14px; }
+  footer { margin-top: 40px; font-size: 13px; color: var(--muted); }
+
+  /* Phones: menu becomes a top bar */
+  @media (max-width: 680px) {
+    .layout { flex-direction: column; }
+    .menu {
+      width: 100%; min-height: 0; position: static;
+      border-right: none; border-bottom: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; gap: 4px 14px; padding: 12px 16px;
+    }
+    .menu .cat { display: none; }
+    .menu a { padding: 2px 0; }
+    main { padding: 20px 16px 48px; }
+    .profile { flex-direction: column; }
+    .profile img { width: 130px; height: 156px; }
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <!-- ========== MENU ========== -->
+  <nav class="menu">
+    <div class="cat">Your Name</div>
+    <a href="#home">Home</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#pors">Positions of Responsibility</a>
+    <a href="cv.pdf" target="_blank">CV</a>
+  </nav>
+
+  <!-- ========== CONTENT ========== -->
+  <main>
+    <h1 id="home">Your Name</h1>
+    <p class="subtitle">Undergraduate Student | Computer Science and Engineering, IIT Bombay</p>
+
+    <div class="profile">
+      <!-- Upload a photo named profile.jpg to the repo -->
+      <img src="profile.jpg" alt="Photo of Your Name" onerror="this.style.display='none'">
+      <div>
+        <p><b>Email:</b> <a href="mailto:yourroll@iitb.ac.in">yourroll@iitb.ac.in</a></p>
+        <p>
+          <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
+          <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        </p>
+        <p><b>Interests:</b> Machine Learning, Systems, Competitive Programming</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <p>
+      I am a second-year undergraduate in the Department of Computer Science and Engineering
+      at the Indian Institute of Technology Bombay. I enjoy building software and learning how
+      systems work under the hood.
+    </p>
+    <p>
+      Outside academics, I like playing football, reading, and taking long walks around
+      Powai Lake.
+    </p>
+
+    <h2>News</h2>
+    <ul>
+      <li>Started a summer internship at <a href="#">Company Name</a> <span class="date">- 2026</span></li>
+      <li>Joined the <a href="#">Web and Coding Club</a> as a convener <span class="date">- 2025</span></li>
+      <li>Joined IIT Bombay <span class="date">- 2025</span></li>
+    </ul>
+
+    <h2 id="education">Education</h2>
+    <ul>
+      <li>
+        <b>Indian Institute of Technology Bombay</b> <span class="date">(2025 - 2029)</span><br>
+        B.Tech. in Computer Science and Engineering
+      </li>
+      <li>
+        <b>Your School Name</b>, City <span class="date">(2023 - 2025)</span><br>
+        Class XII
+      </li>
+    </ul>
+
+    <h2 id="experience">Experience</h2>
+    <h3>Software Engineering Intern, Company Name</h3>
+    <p class="small">May 2026 - July 2026</p>
+    <ul>
+      <li>One line about what you built or worked on.</li>
+      <li>One line about the result or impact.</li>
+    </ul>
+
+    <h2 id="projects">Projects</h2>
+    <ul>
+      <li>
+        <b><a href="https://github.com/yourusername/project-one" target="_blank">Project One</a></b>
+        <span class="date">| Course Project, Spring 2026</span><br>
+        A short description of what the project does and what you used to build it.
+      </li>
+      <li>
+        <b><a href="https://github.com/yourusername/project-two" target="_blank">Project Two</a></b>
+        <span class="date">| Self Project, Winter 2025</span><br>
+        A short description of what the project does and what you used to build it.
+      </li>
+    </ul>
+
+    <h2 id="pors">Positions of Responsibility</h2>
+    <ul>
+      <li><b>Convener</b>, Web and Coding Club, IIT Bombay <span class="date">(2025 - Present)</span></li>
+      <li><b>Teaching Assistant</b>, CS 101 <span class="date">(Spring 2026)</span></li>
+    </ul>
+
+    <footer>Last updated: October 2026</footer>
+  </main>
+</div>
+</body>
+</html>
